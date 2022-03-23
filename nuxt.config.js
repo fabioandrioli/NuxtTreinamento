@@ -8,7 +8,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Aprofundado em nuxt' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -23,6 +23,10 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
+
+  // router:{
+  //   middleware:'auth'
+  // },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
