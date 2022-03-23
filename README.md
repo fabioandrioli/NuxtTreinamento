@@ -101,6 +101,7 @@ a chamda dele fica assim
     console.log('created')
     this.getDevs(); // nova maneira usando o map
   } ``` 
+a
 
 ------------------------------------------------------------------------
 # Getters
