@@ -29,6 +29,10 @@ export default {
             }
        }
     },
+    mounted() {
+        console.log(this.$name)
+        console.log("Mounted")
+    },
     data(){
         return{
             users: []

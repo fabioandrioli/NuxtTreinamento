@@ -19,6 +19,12 @@ export default {
     //this.$store.dispatch('user/getDevs') // maneira antiga
     this.getDevs(); // nova maneira usando o map
   },
+
+  mounted() {
+    //Variavel vinda do plugin
+    console.log(this.$name)
+    console.log("Mounted")
+  },
   data () {
     return{
    

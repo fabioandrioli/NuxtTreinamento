@@ -1,36 +1,45 @@
 # NuxtJs
 Treinando, para relembrar os conceitos de nuxtJs
 
+----------------------------------------------------------------------------
+
 # Parametros de rotas no nuxtJs
 É usado o underline ``` _slug ``` ele ira capturar os parametos da url.
 
+----------------------------------------------------------------------------
 # Definindo template para as páginas filhos
 Usamos dois aquivos do mesmo nome para definir templates. Adicionamos a tag nuxtchild
 
+----------------------------------------------------------------------------
 # Layouts
 Para definirmos um modelos, criamos uma pasta layouts
 e definimos um arquivo defaul, ele ja reconhece automaticamente.
 
+----------------------------------------------------------------------------
 # middleware
 Pode ser usado no arquivo default ae fica padrão para todas as paginas,
 Ou entao em uma pagina especifica. É apenas a chamda de uma funcao dentro do export default.
 se chamarmos uam funcao assim ``` middleware(){ console.log("Teste de middleware")} ``` Ele vai executar sempre que acessar a pagina especifica, ou o projeto caso esteja no arquvio default.
 
+----------------------------------------------------------------------------
 # midleware para toas as rotas
 Para definir uma middleware para todas as rotas,
 Temos que ir no arquivo nuxt.config.js 
 - adicionar ```router:{},``` dentro do objeto definimos o middleware
 
+----------------------------------------------------------------------------
 # Context middleware
 No middleware podemos usar o context, que nos da diversa ferramentas.
 Uma é redirect onde podemos controlar nossas rotas.
 
+----------------------------------------------------------------------------
 # asyncData ()
 Usado para fazer requisicoes. Roda do lado do cliente e do lado do servidor
 Roda antes do componenent ser criado.
     - # Dentro dele tamém temos o context, que dentro dele tem o $axios.
 Então podemos descontrui-los e usalo para fazer requisicao http.
 
+----------------------------------------------------------------------------
 # fetch()
 A propriedade fetch faz o que o asyncData faz, porem depois que carrega o component
 O legal é que ele nos da um atributo chamado "peding" que tem valores boleanos falso ou true
@@ -38,6 +47,7 @@ enquanto ele esta fazendo uma requisicao, ele deixa o valor como falso.
 Depois que a requisicao é terminada, ele seta como true.
 ```<div v-if="$fetchState"> ```
 
+-----------------------------------------------------------------------------
 # Propiredade haed
 A propriedade head possibilita mecher com as metas tags
 - ``` head() ``` é uma propriedade para usar meta-tag.
@@ -108,3 +118,23 @@ a
 São funcoes ultilitarias, que ajudarao a dar ajuste
 em algum momento, exemplo, colocar todoas as primeiras
 Letras do nome de um usuário em maiusculo.
+
+-------------------------------------------------------------------
+
+# Plugins
+Criamos uma pasta chamada plugins, e todo plugin ficara dentro dela.
+Pelo nome da pasta registrada no config o nuxt reconhece automaticamente.
+- ```   
+ plugins: [
+    '@/plugin/my-plugin.',
+  ],
+```
+Podemos usar pluggins para facilitar nossa vida
+Neste projeto usamos v-tooltip
+- ``` npm install --save v-tooltip ```
+Instalamos o pacote. normal como fariamos no vuejs client.
+temos que registrar o plugin no arquvi nuxt.config.js
+depois disso ele se torna uma variavel imutavel, então usamos dele com o $ na frente
+
+- O plugin tbm recebe context, e recebe tbm o inject.
+-  Com inject podemos alterar a variavel criada no plugin.
