@@ -124,8 +124,7 @@ Letras do nome de um usuário em maiusculo.
 # Plugins
 Criamos uma pasta chamada plugins, e todo plugin ficara dentro dela.
 Pelo nome da pasta registrada no config o nuxt reconhece automaticamente.
-- ```   
- plugins: [
+- ```  plugins: [
     '@/plugin/my-plugin.',
   ],
 ```
