@@ -26,8 +26,12 @@ export default {
     '@/plugins/vtooltip',
   ],
 
-  publicRuntimeConfig: {},
-  privateRuntimeconfig:{},
+  publicRuntimeConfig: {
+    youtube_key:'youtube',
+  },
+  privateRuntimeconfig:{
+    facebook_key:'axy'
+  },
 
   // router:{
   //   middleware:'auth'

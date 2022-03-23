@@ -63,7 +63,7 @@ Depois que a requisicao é terminada, ele seta como true.
 A propriedade head possibilita mecher com as metas tags
 - ``` head() ``` é uma propriedade para usar meta-tag.
 
------------------------------------------------------------------------- 
+------------------------------------------------------------------------------ 
 
 # Vuex
 - O vuex usa a store, que usa 3 propriedade
@@ -150,3 +150,28 @@ depois disso ele se torna uma variavel imutavel, então usamos dele com o $ na f
 -------------------------------------------------
 
 # Variaveis  de ambientes
+``` publicRuntimeConfig: { youtube_key:'youtube',}, privateRuntimeconfig:{ facebook_key:'axy'}```
+As variaves de ambiente podem ser publica ou privadas
+podemos usar ela dentro do template chamando o {{config}}
+
+``` {{config.youtube_key}} ```
+
+tbm podemos chamar ela, dentro do script
+chamando como valor imutavel
+
+``` this.$config.youtube_key```
+
+-------------------------------------------------
+# Comandos para deploymant no nuxtJs
+Devemos rodar yarn build, ou npm run build ou npm run production
+- Vai ser construído uma build, ele vai deixar pronto para ir para o servidor.
+- Depois disso ele sai do ambiente de desenvolvimento e não recompila mais as alterações.
+
+No ```nuxtjs.config.js``` também podemos habilitar o ``` target: 'static' ``` 
+Ele tem dois tipos``` target:'server' ``` ou ``` target:'static'
+
+# target static
+Quando habilitamos o ``` target: 'static' ```
+ele nos permite rodar o comando yarn generate || npm generate
+Ele transforma o projeto em um HTML statico padrão.
+Ae voce pode rodar seu projeto html normal
