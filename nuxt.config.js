@@ -23,7 +23,11 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/my-plugin',
+    '@/plugins/vtooltip',
   ],
+
+  publicRuntimeConfig: {},
+  privateRuntimeconfig:{},
 
   // router:{
   //   middleware:'auth'

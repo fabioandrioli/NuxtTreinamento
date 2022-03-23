@@ -16,6 +16,17 @@ Para definirmos um modelos, criamos uma pasta layouts
 e definimos um arquivo defaul, ele ja reconhece automaticamente.
 
 ----------------------------------------------------------------------------
+# Mounted() 
+Só roda no clientside , nao roda do serveside
+
+
+----------------------------------------------------------------------------
+# Create()
+ roda no serviceside e no clideside
+
+
+
+----------------------------------------------------------------------------
 # middleware
 Pode ser usado no arquivo default ae fica padrão para todas as paginas,
 Ou entao em uma pagina especifica. É apenas a chamda de uma funcao dentro do export default.
@@ -125,15 +136,17 @@ Letras do nome de um usuário em maiusculo.
 Criamos uma pasta chamada plugins, e todo plugin ficara dentro dela.
 Pelo nome da pasta registrada no config o nuxt reconhece automaticamente.
 - ```  plugins: [
-    '@/plugin/my-plugin.',
-  ],
-```
+    '@/plugin/my-plugin.'
+  ],```
 Podemos usar pluggins para facilitar nossa vida
 Neste projeto usamos v-tooltip
 - ``` npm install --save v-tooltip ```
 Instalamos o pacote. normal como fariamos no vuejs client.
 temos que registrar o plugin no arquvi nuxt.config.js
-depois disso ele se torna uma variavel imutavel, então usamos dele com o $ na frente
-
+depois disso ele se torna uma variavel imutavel, então usamos dele com o $ na frente.
 - O plugin tbm recebe context, e recebe tbm o inject.
--  Com inject podemos alterar a variavel criada no plugin.
+- Com inject podemos alterar a variavel criada no plugin.
+
+-------------------------------------------------
+
+# Variaveis  de ambientes
